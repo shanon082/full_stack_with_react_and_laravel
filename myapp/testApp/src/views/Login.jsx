@@ -1,4 +1,8 @@
 import { Link } from "react-router-dom";
+import axiosClient from "../axiosClient";
+import { useRef } from "react";
+import {useStateContext} from "../contexts/Contextprovider";
+
 
 const Login = () => {
 
@@ -29,7 +33,7 @@ const Login = () => {
       <div className="p-5 flex flex-col sm:w-full md:w-1/2 lg:w-1/3 rounded-md bg-white">
         <h1 className="text-4xl text-center text-black mb-4">Login</h1>
         <form onSubmit={Submit} className="flex flex-col">
-          <label htmlFor="username" className="text-black text-2xl mb-2">Email:</label>
+          <label htmlFor="email" className="text-black text-2xl mb-2">Email:</label>
           <input ref={emailRef} type="text" placeholder="Enter UserName" required className="border-blue-600 mb-3 rounded-md px-2 py-2 outline-none border-2" />
           <label htmlFor="Password" className="text-black text-2xl mb-2">password:</label>
           <input ref={passwordRef} type="password" required placeholder="Enter Password" className="border-blue-600 mb-3 rounded-md px-2 py-2 outline-none border-2"/>

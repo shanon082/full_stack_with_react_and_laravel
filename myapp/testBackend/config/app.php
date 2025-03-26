@@ -123,4 +123,12 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'paths' => ['api/*', 'web/*'], // Routes where CORS rules apply
+    'allowed_methods' => ['*'], // Allow all HTTP methods (GET, POST, PUT, DELETE, etc.)
+    'allowed_origins' => ['http://localhost:5173'], // Allow requests from your frontend's origin
+    'allowed_headers' => ['*'], // Allow all headers
+    'exposed_headers' => [], // Headers exposed to the frontend
+    'max_age' => 0, // Cache duration for preflight requests
+    'supports_credentials' => false, // Set to true if cookies or credentials are needed
+
 ];
